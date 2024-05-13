@@ -141,7 +141,7 @@
 
 ```Bash
 npm install
-npm run start
+npm run dev
 ```
 
 <h3>Building</h3>
