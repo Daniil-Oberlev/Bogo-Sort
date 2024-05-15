@@ -1,6 +1,6 @@
-import React from 'react';
-import authorsData from '../../authors_and_socials.json'; // Импорт файла JSON
-import '../styles/header.css';
+import React from 'react'
+import authorsData from '../../authors_and_socials.json'
+import '../styles/header.css'
 
 const Header: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const Header: React.FC = () => {
         ))}
       </ul>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
