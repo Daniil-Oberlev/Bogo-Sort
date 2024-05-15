@@ -1,6 +1,6 @@
-import React from 'react'
-
-import '../styles/header.css'
+import React from 'react';
+import authorsData from '../../authors_and_socials.json'; // Импорт файла JSON
+import '../styles/header.css';
 
 const Header: React.FC = () => {
   return (
@@ -8,11 +8,12 @@ const Header: React.FC = () => {
       <h1>Bogo Sort Visualizer</h1>
       <ul className="header__authors-list">
         Authors:
-        <li>Shevchenko&nbsp;Timofey</li>
-        <li>Oberlev&nbsp;Daniil</li>
+        {authorsData.authors.map((author, index) => (
+          <li key={index}>{author.name}</li>
+        ))}
       </ul>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
