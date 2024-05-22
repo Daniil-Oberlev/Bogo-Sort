@@ -45,7 +45,7 @@ const BogoSortVisualizer: React.FC = () => {
   const [state, setState] = useState<BogoSortState>({
     items: [],
     sorted: false,
-    itemCount: 5,
+    itemCount: 10,
     sorting: false,
   })
 
@@ -80,7 +80,7 @@ const BogoSortVisualizer: React.FC = () => {
           }))
           clearInterval(sortInterval)
         }
-      }, 1)
+      }, 50)
 
       return () => clearInterval(sortInterval)
     }
@@ -108,7 +108,7 @@ const BogoSortVisualizer: React.FC = () => {
 
   return (
     <main className="bogo-sort-visualizer">
-      <h2>Current block count: {state.itemCount}</h2>
+      <h2 className="bogo-counter">Current block count: {state.itemCount}</h2>
       <ul className="sort-container">
         {state.items.map((size, index) => (
           <li
